@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "build": "node src/index.js"
+    "build": "node src/index.js",
+    "migrate": "knex migrate:latest --knexfile src/models/knexfile.js"
   },
   "author": "bakhtiar rifai",
   "license": "MIT",
@@ -13,8 +14,11 @@
     "nodemon": "latest"
   },
   "dependencies": {
-    "express": "latest",
     "cors": "latest",
-    "dotenv": "latest"
+    "dotenv": "latest",
+    "express": "latest",
+    "knex": "^2.4.2",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.6.5"
   }
 }
